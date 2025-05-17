@@ -18,7 +18,7 @@ pub struct TodoState {
 fn get_todos_file_path() -> std::path::PathBuf {
 let home = std::env::var("HOME").or(std::env::var("USERPROFILE")).expect("error");
     let mut path = std::path::PathBuf::from(home);
-    path.push(".app");
+    path.push(".todotauriapp");
     fs::create_dir_all(&path).expect("error");
     path.push("todos.json");
     path
